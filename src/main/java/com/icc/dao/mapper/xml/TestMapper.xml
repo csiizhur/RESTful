@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.icc.dao.TestMapperDao">
+
+	<resultMap type="com.icc.entity.TestData" id="testMap">
+		<id column="id" property="id" />
+		<result column="name" property="name" />
+		<result column="developers" property="developers" />
+		<result column="opentime" property="opentime" />
+		<result column="type" property="type" />
+		<result column="floor" property="floor" />
+		<result column="zhandiarea" property="zhandiarea" />
+	</resultMap>
+
+	<select id="getDatas" resultMap="testMap">
+		select * from
+		winshang_szxiangmu limit 0,10
+	</select>
+	
+</mapper>
